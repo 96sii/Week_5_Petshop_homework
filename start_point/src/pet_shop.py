@@ -20,4 +20,32 @@ def get_pets_sold(pet_shop):
 def increase_pets_sold(pet_shop, new_pets_sold):
     pet_shop["admin"]["pets_sold"] += new_pets_sold
 
+# 6. Stock count 
+def get_stock_count(pet_shop):
+    return len(pet_shop["pets"])
+
+# 7. Get pets by breed
+def get_pets_by_breed(pet_shop, dog_breed):
+    pet_breeds = []
+    for pet in pet_shop["pets"]:
+        if pet["breed"] == dog_breed:
+            pet_breeds.append(pet)
+    return pet_breeds
+
+# 9. Find pet by name 
+
+def find_pet_by_name(pet_shop, name):
+    for pet in pet_shop["pets"]:
+        if pet["name"] == name:
+            return pet
+
+# 11. Remove pet by name 
+def remove_pet_by_name(pet_shop, name):
+    for pet in pet_shop["pets"]:
+        if pet["name"] == name:
+            pet_shop["pets"].remove(pet)
+
+# 12. Add pet to stock 
+
+
 
